@@ -10,45 +10,38 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Meme Creator View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MemeMe_1_0" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                <viewController id="BYZ-38-t0r" customClass="MemeCreatorViewController" customModule="MemeMe_1_0" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" layoutMarginsFollowReadableWidth="YES" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S3h-5R-zBe" userLabel="TopView">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="45"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="45" id="zgM-Jm-EUL"/>
-                                </constraints>
-                            </view>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rlO-nx-0aW">
-                                <rect key="frame" x="0.0" y="52" width="375" height="526"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" preservesSuperviewLayoutMargins="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rlO-nx-0aW">
+                                <rect key="frame" x="0.0" y="65" width="375" height="513"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
-                            <textField opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="vHm-PD-ff8">
-                                <rect key="frame" x="20" y="85" width="339" height="50"/>
+                            <textField opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="vHm-PD-ff8">
+                                <rect key="frame" x="20" y="85" width="335" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="C79-Fo-LGI"/>
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters" enablesReturnKeyAutomatically="YES"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="textAlignment" value=".center" localized="YES"/>
                                 </userDefinedRuntimeAttributes>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="752" contentHorizontalAlignment="center" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="QXH-oF-t6a">
+                            <textField opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="752" contentHorizontalAlignment="center" contentVerticalAlignment="center" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="QXH-oF-t6a">
                                 <rect key="frame" x="20" y="508" width="335" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="wES-gT-BSD"/>
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters" enablesReturnKeyAutomatically="YES"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="textAlignment" value=".center" localized="YES"/>
                                 </userDefinedRuntimeAttributes>
@@ -94,27 +87,24 @@
                                 </items>
                             </toolbar>
                         </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="rlO-nx-0aW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="0od-Ep-Lnp"/>
                             <constraint firstItem="GrP-tE-qxQ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="2GV-JZ-C6c"/>
                             <constraint firstItem="vHm-PD-ff8" firstAttribute="top" secondItem="GrP-tE-qxQ" secondAttribute="bottom" constant="20" id="68U-c1-YEm"/>
                             <constraint firstItem="GrP-tE-qxQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="6C5-A0-iLd"/>
-                            <constraint firstItem="vHm-PD-ff8" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="-16" id="9EE-hy-0e8"/>
+                            <constraint firstItem="vHm-PD-ff8" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="-20" id="9EE-hy-0e8"/>
                             <constraint firstItem="zol-SN-mZN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Aga-55-Z1x"/>
                             <constraint firstItem="zol-SN-mZN" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="JBw-1F-Sqw"/>
                             <constraint firstItem="GrP-tE-qxQ" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="OoC-Hg-G92"/>
                             <constraint firstItem="zol-SN-mZN" firstAttribute="top" secondItem="QXH-oF-t6a" secondAttribute="bottom" constant="20" id="Qqf-X0-ZQY"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="QXH-oF-t6a" secondAttribute="trailing" constant="20" id="RHU-u6-pOV"/>
-                            <constraint firstItem="S3h-5R-zBe" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Ssh-f9-dIS"/>
                             <constraint firstItem="vHm-PD-ff8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Yyp-pJ-GZJ"/>
                             <constraint firstItem="QXH-oF-t6a" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="b3Q-ex-24X"/>
                             <constraint firstItem="zol-SN-mZN" firstAttribute="top" secondItem="rlO-nx-0aW" secondAttribute="bottom" id="cTo-ge-FLy"/>
                             <constraint firstItem="zol-SN-mZN" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="nfv-pS-zVn"/>
-                            <constraint firstItem="S3h-5R-zBe" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="qJJ-l3-cGK"/>
-                            <constraint firstItem="S3h-5R-zBe" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="uYW-K0-wET"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rlO-nx-0aW" secondAttribute="trailing" id="vTU-zR-ANt"/>
-                            <constraint firstItem="rlO-nx-0aW" firstAttribute="top" secondItem="GrP-tE-qxQ" secondAttribute="bottom" constant="-13" id="ysZ-6n-2hd"/>
+                            <constraint firstItem="rlO-nx-0aW" firstAttribute="top" secondItem="GrP-tE-qxQ" secondAttribute="bottom" id="ysZ-6n-2hd"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -130,7 +120,6 @@
                         <outlet property="shareButton" destination="8NW-Ex-9qt" id="56g-Ki-RwO"/>
                         <outlet property="toolBar" destination="zol-SN-mZN" id="BgS-iF-QBx"/>
                         <outlet property="topTextField" destination="vHm-PD-ff8" id="jIE-fu-W0S"/>
-                        <outlet property="topView" destination="S3h-5R-zBe" id="Mfn-E0-lGv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
